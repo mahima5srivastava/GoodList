@@ -22,4 +22,11 @@ class AddTaskViewController: UIViewController {
 
     }
 
+    @IBAction func save(_ sender: Any) {
+        guard let priority = Priority(rawValue: prioritySegment.selectedSegmentIndex), let title = taskTextField.text else {
+            return
+        }
+        
+    }
+    
 }

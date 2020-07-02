@@ -113,7 +113,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="akF-u0-nQ6"/>
                     </view>
-                    <navigationItem key="navigationItem" id="JAw-jx-cuq"/>
+                    <navigationItem key="navigationItem" id="JAw-jx-cuq">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="it2-wa-CFZ">
+                            <connections>
+                                <action selector="save:" destination="Q1q-JO-CMy" id="9ro-gI-AUH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="prioritySegment" destination="w1g-Vl-vAE" id="sVi-Qb-blN"/>
                         <outlet property="taskTextField" destination="2RX-3B-yJV" id="jhB-PO-Tig"/>

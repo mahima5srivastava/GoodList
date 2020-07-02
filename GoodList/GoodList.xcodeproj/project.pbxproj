@@ -21,6 +21,7 @@
 		D45C0E2A24C49CD300C3C826 /* GoodListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45C0E2924C49CD300C3C826 /* GoodListUITests.swift */; };
 		D45C0E3824C49F4700C3C826 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45C0E3724C49F4700C3C826 /* TaskListViewController.swift */; };
 		D45C0E3A24C49F5300C3C826 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45C0E3924C49F5300C3C826 /* AddTaskViewController.swift */; };
+		D45C0E3C24C4A8F100C3C826 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45C0E3B24C4A8F100C3C826 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		D45C0E2B24C49CD300C3C826 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D45C0E3724C49F4700C3C826 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		D45C0E3924C49F5300C3C826 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		D45C0E3B24C4A8F100C3C826 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		EB41C1F7F6E4DCFE626C26DC /* Pods-GoodListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodListTests.debug.xcconfig"; path = "Target Support Files/Pods-GoodListTests/Pods-GoodListTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC7D5DD505B3957C72F57052 /* Pods_GoodList_GoodListUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodList_GoodListUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEACFBB7BC240DAABEF84A95 /* Pods-GoodList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodList.release.xcconfig"; path = "Target Support Files/Pods-GoodList/Pods-GoodList.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				D45C0E0D24C49CD200C3C826 /* GoodList.xcdatamodeld */,
 				D45C0E3724C49F4700C3C826 /* TaskListViewController.swift */,
 				D45C0E3924C49F5300C3C826 /* AddTaskViewController.swift */,
+				D45C0E3B24C4A8F100C3C826 /* Task.swift */,
 			);
 			path = GoodList;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				D45C0E0524C49CD200C3C826 /* AppDelegate.swift in Sources */,
 				D45C0E0F24C49CD200C3C826 /* GoodList.xcdatamodeld in Sources */,
 				D45C0E0724C49CD200C3C826 /* SceneDelegate.swift in Sources */,
+				D45C0E3C24C4A8F100C3C826 /* Task.swift in Sources */,
 				D45C0E3824C49F4700C3C826 /* TaskListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
