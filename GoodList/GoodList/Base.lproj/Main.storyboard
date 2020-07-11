@@ -23,6 +23,9 @@
                                     <segment title="Medium"/>
                                     <segment title="Low"/>
                                 </segments>
+                                <connections>
+                                    <action selector="priorityChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="rIh-wr-G3Q"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qc4-Wl-gpF">
                                 <rect key="frame" x="0.0" y="139" width="414" height="723"/>
@@ -57,7 +60,7 @@
                     <navigationItem key="navigationItem" id="h9T-ij-K7H">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="jG9-gf-QMn">
                             <connections>
-                                <segue destination="Q1q-JO-CMy" kind="show" id="wbs-V2-Ph3"/>
+                                <segue destination="CSL-8u-i7u" kind="presentation" id="iry-B5-xhf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -75,11 +78,11 @@
             <objects>
                 <viewController id="Q1q-JO-CMy" customClass="AddTaskViewController" customModule="GoodList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lzx-SN-82j">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="qL2-hG-ac9">
-                                <rect key="frame" x="16" y="399.5" width="382" height="97"/>
+                                <rect key="frame" x="16" y="372.5" width="382" height="97"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="w1g-Vl-vAE">
                                         <rect key="frame" x="88" y="0.0" width="206" height="32"/>
@@ -127,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2u9-uS-V8D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1733" y="27"/>
+            <point key="canvasLocation" x="3389.8550724637685" y="-36.160714285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DBE-8f-Xhm">
@@ -146,6 +149,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rlz-WR-Psn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wLR-aY-LNb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CSL-8u-i7u" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cYf-vj-klk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Q1q-JO-CMy" kind="relationship" relationship="rootViewController" id="o9r-7w-Prx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fjP-HR-UuJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2479.7101449275365" y="-36.160714285714285"/>
         </scene>
     </scenes>
 </document>

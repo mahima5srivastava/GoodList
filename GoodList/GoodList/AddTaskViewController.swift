@@ -7,9 +7,17 @@
 //
 
 import UIKit
+import RxSwift
 
 class AddTaskViewController: UIViewController {
 
+    //MARK:- Properties
+    
+    private var taskSubject = PublishSubject<Task>()
+    var taskSubjectObservable: Observable<Task> {
+        return taskSubject.asObservable()
+    }
+    
     //MARK: - IBOutlets
     
     @IBOutlet weak var taskTextField: UITextField!
@@ -26,7 +34,9 @@ class AddTaskViewController: UIViewController {
         guard let priority = Priority(rawValue: prioritySegment.selectedSegmentIndex), let title = taskTextField.text else {
             return
         }
-        
+        let task = Task(title: title, priority: priority)
+        taskSubject.onNext(task)
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
