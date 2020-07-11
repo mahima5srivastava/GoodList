@@ -35,7 +35,7 @@ class TaskListViewController: UIViewController {
             guard var existingTasks = self?.tasks.value else {return}
             existingTasks.append(task)
             self?.tasks.accept(existingTasks)
-            self?.taskTableView.reloadData()
+            self?.filterTask()
         }).disposed(by: disposeBag)
         
     }
@@ -44,12 +44,16 @@ class TaskListViewController: UIViewController {
         filterTask()
     }
     private func filterTask() {
-        guard let selectedPriority = Priority(rawValue: prioritySegment.selectedSegmentIndex - 1) else {return}
+        filteredTask = tasks.value
+        guard let selectedPriority = Priority(rawValue: prioritySegment.selectedSegmentIndex - 1) else {
+            taskTableView.reloadData()
+            return
+        }
         self.tasks.map { task in
             return task.filter{$0.priority == selectedPriority}
         }.subscribe(onNext: { [weak self] tasks in
             self?.filteredTask = tasks
-            print(self?.filteredTask)
+            self?.taskTableView.reloadData()
             }).disposed(by: disposeBag)
         
     }
@@ -57,14 +61,14 @@ class TaskListViewController: UIViewController {
 
 extension TaskListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.tasks.value.count
+        return self.filteredTask.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TaskTableViewCell") else {
             return UITableViewCell()
         }
-        cell.textLabel?.text = self.tasks.value[indexPath.row].title
+        cell.textLabel?.text = self.filteredTask[indexPath.row].title
         return cell
     }
     
